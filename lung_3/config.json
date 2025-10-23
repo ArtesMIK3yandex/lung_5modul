@@ -1,0 +1,49 @@
+{
+  "processing_modes": [
+    {
+      "id": "mode_1",
+      "name": "Базовая сегментация лёгких",
+      "parameters": {
+        "threshold": -500,
+        "smooth": true
+      }
+    },
+    {
+      "id": "mode_2",
+      "name": "Детальная сегментация",
+      "parameters": {
+        "threshold": -600,
+        "smooth": true,
+        "refine": true
+      }
+    }
+  ],
+  "modules": {
+    "segmentation": {
+      "visible": true,
+      "enabled": true,
+      "order": 1,
+      "name": "Сегментация",
+      "removable": false
+    },
+    "statistics": {
+      "visible": true,
+      "enabled": true,
+      "order": 2,
+      "name": "Статистика по исследованию",
+      "removable": true
+    }
+  },
+  "ui_layout": {
+    "projection_order": [
+      "axial",
+      "sagittal",
+      "coronal"
+    ],
+    "toolbar_order": [
+      "load",
+      "save",
+      "reset"
+    ]
+  }
+}
