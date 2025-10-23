@@ -4,18 +4,17 @@
 """
 
 from PyQt5.QtWidgets import QWidget
-from abc import ABC, abstractmethod
+from abc import abstractmethod
 from typing import Dict, Any
 
 
-class BaseModule(ABC, QWidget):
+class BaseModule(QWidget):
     """
-    Абстрактный базовый класс для всех модулей приложения
+    Базовый класс для всех модулей приложения
     
     Каждый модуль должен наследоваться от этого класса и реализовать:
     - get_module_info(): метаданные модуля
     - initialize(): инициализация UI и логики
-    - process(): основная логика обработки
     """
     
     def __init__(self, parent=None):
@@ -35,7 +34,7 @@ class BaseModule(ABC, QWidget):
                 'name': 'Отображаемое имя',
                 'version': '1.0.0',
                 'description': 'Описание функционала',
-                'removable': True/False  # Можно ли скрыть модуль
+                'removable': True/False
             }
         """
         pass
